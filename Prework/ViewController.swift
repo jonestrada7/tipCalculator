@@ -20,10 +20,15 @@ class ViewController: UIViewController {
         self.title = "Tip Calculator"
         let defaults = UserDefaults.standard
         defaults.set(0.15, forKey: "defaultTipVal")
+        defaults.set("simple", forKey: "colorScheme")
         defaults.synchronize()
         tipPercentLabel.text = String(defaults.double(forKey: "defaultTipVal"))
         self.view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         billAmountTextField.keyboardType = .numberPad
+        
+        DispatchQueue.main.async {
+            self.billAmountTextField.becomeFirstResponder()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
