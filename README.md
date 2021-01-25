@@ -35,7 +35,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Oftentimes, it's easy to get narrowminded and forget that errors can occur when outlets are still connected to nonexistent code. As such, it is important to always double check the connections between outlets and the code. Furthermore, propagating information across views proved to be slightly tricky, involving the loading and preloading of values in UserDefaults. 
 
 ## License
 
